@@ -1,0 +1,110 @@
+Lab report for BST Lab - zjohnson
+Timestamp: 2013-12-02 00:20:41
+
+|  :scenario |                                :title |                   :result | :score |
+|------------+---------------------------------------+---------------------------+--------|
+|    working | Test student code vs instructor tests |                      Fail |     11 |
+| qualifying | Test student tests vs instructor code |                      Fail |      3 |
+| qualifying |           Qualifying Scenarios Failed | No further scenarios run. |      0 |
+|      total |                           Total Score |                           |     14 |
+
+Details:
+
+
+** Details for Test student code vs instructor tests
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core-spec, being replaced by: #'bst.core/find
+F.FF.F..F.FFFFFFFFF
+
+Failures:
+
+  1) Internal Tests has a functioning tree-to-list
+     Expected: ([d 1] ([b 2] ([a 4] nil nil) ([c 5] nil nil)) ([f 3] ([e 6] nil nil) ([g 7] nil nil)))
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:40
+
+  2) Adding elements changes size Add one element makes size one
+     Expected: 1
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:58
+
+  3) Adding elements changes size Add seven elements makes size seven
+     Expected: 7
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:60
+
+  4) Find Finds elements that are in the tree.
+     Expected: 1
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:66
+
+  5) Find-Key Finds values that are in the tree.
+     Expected: d
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:81
+
+  6) Delete Does nothing to empty trees.
+     Expected: #bst.core.BST{:root nil, :size 0}
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:94
+
+  7) Delete Deletes leaf nodes.
+     Expected: ([d 1] ([b 2] nil ([c 5] nil nil)) ([f 3] ([e 6] nil nil) ([g 7] nil nil)))
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:96
+
+  8) Delete Deletes one-child nodes.
+     Expected: ([g 1] ([d 2] ([a 6] nil ([b 7] nil nil)) ([f 3] ([e 4] nil nil) nil)) ([l 8] ([k 9] ([j 10] nil nil) nil) ([m 11] nil ([n 12] nil ([o 13] nil nil)))))
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:117
+
+  9) Delete Deletes two-child nodes.
+     Expected: ([g 1] ([c 5] ([a 6] nil ([b 7] nil nil)) ([f 3] ([e 4] nil nil) nil)) ([l 8] ([k 9] ([j 10] nil nil) nil) ([m 11] nil ([n 12] nil ([o 13] nil nil)))))
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:148
+
+  10) Delete-value Does nothing to empty trees.
+     Expected: #bst.core.BST{:root nil, :size 0}
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:180
+
+  11) Delete-value Delete-Values leaf nodes.
+     Expected: ([d 1] ([b 2] nil ([c 5] nil nil)) ([f 3] ([e 6] nil nil) ([g 7] nil nil)))
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:182
+
+  12) Delete-value Delete-Values one-child nodes.
+     Expected: ([g 1] ([d 2] ([a 6] nil ([b 7] nil nil)) ([f 3] ([e 4] nil nil) nil)) ([l 8] ([k 9] ([j 10] nil nil) nil) ([m 11] nil ([n 12] nil ([o 13] nil nil)))))
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:203
+
+  13) Delete-value Delete-Values two-child nodes.
+     Expected: ([g 1] ([c 5] ([a 6] nil ([b 7] nil nil)) ([f 3] ([e 4] nil nil) nil)) ([l 8] ([k 9] ([j 10] nil nil) nil) ([m 11] nil ([n 12] nil ([o 13] nil nil)))))
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:234
+
+  14) map-tree maps stuf onto trees.
+     Expected: ([d 2] ([b 3] ([a 5] nil nil) ([c 6] nil nil)) ([f 4] ([e 7] nil nil) ([g 8] nil nil)))
+          got: nil (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:263
+
+Finished in 0.19202 seconds
+19 examples, 14 failures
+
+
+** Details for Test student tests vs instructor code
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core-spec, being replaced by: #'bst.core/find
+..F
+
+Failures:
+
+  1) The spec file should have size 3 when the tree has three elements.
+     Expected: 3
+          got: 0 (using =)
+     /home/grader/quarry/bst-lab/zjohnson/running/spec/bst/core_spec.clj:25
+
+Finished in 0.00599 seconds
+3 examples, 1 failures
